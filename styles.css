@@ -1163,3 +1163,152 @@ a {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
+/* Add styles for three-card insurance products layout */
+.insurance-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.insurance-product-card {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-top: 4px solid #1e40af;
+}
+
+.insurance-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.insurance-product-card h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #1e40af;
+  text-align: center;
+}
+
+.product-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-list li {
+  padding: 12px 0 12px 28px;
+  position: relative;
+  border-bottom: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 15px;
+}
+
+.product-list li:last-child {
+  border-bottom: none;
+}
+
+.product-list li:before {
+  content: "•";
+  position: absolute;
+  left: 8px;
+  color: #1e40af;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .hero {
+    padding: 80px 0 60px;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+  }
+
+  .hero-ctas .btn-large {
+    width: 100%;
+  }
+
+  .two-column-layout,
+  .join-layout,
+  .contact-layout,
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .floating-contacts {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .floating-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .services-grid,
+  .outcomes-grid,
+  .estate-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Responsive styles for insurance cards */
+  .insurance-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .btn-large {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+
+  .section-header {
+    margin-bottom: 48px;
+  }
+
+  .modal-content {
+    padding: 28px;
+  }
+
+  .contact-form-container,
+  .join-form-container {
+    padding: 28px;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .portrait-placeholder {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+}
