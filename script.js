@@ -210,3 +210,47 @@ window.addEventListener("scroll", () => {
 
   lastScroll = currentScroll
 })
+
+// Language toggle functionality
+let currentLanguage = "en"
+
+function translatePage(lang) {
+  currentLanguage = lang
+  const elements = document.querySelectorAll("[data-en][data-zh]")
+
+  elements.forEach((element) => {
+    const text = lang === "zh" ? element.getAttribute("data-zh") : element.getAttribute("data-en")
+    if (text) {
+      // For input elements, update placeholder
+      if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
+        element.placeholder = text
+      }
+      // For select options
+      else if (element.tagName === "OPTION") {
+        element.textContent = text
+      }
+      // For other elements, update text content
+      else {
+        element.textContent = text
+      }
+    }
+  })
+
+  // Store language preference
+  localStorage.setItem("preferredLanguage", lang)
+}
+
+// Language toggle button
+const languageToggle = document.getElementById("languageToggle")
+if (languageToggle) {
+  languageToggle.addEventListener("click", () => {
+    const newLang = currentLanguage === "en" ? "zh" : "en"
+    translatePage(newLang)
+  })
+}
+
+// Load saved language preference
+const savedLanguage = localStorage.getItem("preferredLanguage")
+if (savedLanguage) {
+  translatePage(savedLanguage)
+}
