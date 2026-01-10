@@ -236,17 +236,31 @@ function translatePage(lang) {
     }
   })
 
+  // Update language toggle button text
+  const langTexts = document.querySelectorAll(".lang-text")
+  langTexts.forEach((el) => {
+    el.textContent = lang === "en" ? "中文" : "EN"
+  })
+
   // Store language preference
   localStorage.setItem("preferredLanguage", lang)
 }
 
-// Language toggle button
+// Language toggle buttons (desktop and mobile)
 const languageToggle = document.getElementById("languageToggle")
+const languageToggleMobile = document.getElementById("languageToggleMobile")
+
+function handleLanguageToggle() {
+  const newLang = currentLanguage === "en" ? "zh" : "en"
+  translatePage(newLang)
+}
+
 if (languageToggle) {
-  languageToggle.addEventListener("click", () => {
-    const newLang = currentLanguage === "en" ? "zh" : "en"
-    translatePage(newLang)
-  })
+  languageToggle.addEventListener("click", handleLanguageToggle)
+}
+
+if (languageToggleMobile) {
+  languageToggleMobile.addEventListener("click", handleLanguageToggle)
 }
 
 // Load saved language preference

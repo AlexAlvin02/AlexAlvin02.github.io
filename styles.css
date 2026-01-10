@@ -152,12 +152,6 @@ a {
   color: white;
 }
 
-/* Add styles for language toggle button */
-.floating-btn.language-toggle {
-  background: #f59e0b;
-  color: white;
-}
-
 .floating-btn:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
@@ -216,6 +210,32 @@ a {
 .nav-desktop .btn-primary {
   padding: 10px 24px;
   font-size: 15px;
+}
+
+/* Language Toggle Button - Header */
+.language-toggle-header,
+.language-toggle-mobile {
+  background: #f59e0b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-toggle-header:hover,
+.language-toggle-mobile:hover {
+  background: #d97706;
+  transform: translateY(-1px);
+}
+
+.language-toggle-mobile {
+  margin-top: 8px;
+  width: 100%;
+  padding: 12px 16px;
 }
 
 .mobile-menu-toggle {
