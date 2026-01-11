@@ -128,6 +128,13 @@ function translatePage(lang) {
       else if (element.tagName === "OPTION") {
         element.textContent = text
       }
+      // For elements with tooltip, only update the first text node
+      else if (element.classList.contains("has-tooltip")) {
+        const firstTextNode = element.firstChild
+        if (firstTextNode && firstTextNode.nodeType === Node.TEXT_NODE) {
+          firstTextNode.textContent = text
+        }
+      }
       // For other elements, update text content
       else {
         element.textContent = text
@@ -163,3 +170,18 @@ const savedLanguage = localStorage.getItem("preferredLanguage")
 if (savedLanguage) {
   translatePage(savedLanguage)
 }
+
+// Tooltip functionality
+document.querySelectorAll(".has-tooltip").forEach((item) => {
+  const tooltip = item.querySelector(".product-tooltip")
+  if (tooltip) {
+    item.addEventListener("mouseenter", () => {
+      tooltip.style.visibility = "visible"
+      tooltip.style.opacity = "1"
+    })
+    item.addEventListener("mouseleave", () => {
+      tooltip.style.visibility = "hidden"
+      tooltip.style.opacity = "0"
+    })
+  }
+})
