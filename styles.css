@@ -185,6 +185,12 @@ a {
   margin-bottom: 4px;
 }
 
+.brand-credentials {
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748b;
+}
+
 .brand-title {
   font-size: 14px;
   color: #64748b;
@@ -778,6 +784,12 @@ a {
 
 .about-content h2 {
   margin-bottom: 8px;
+}
+
+.about-credentials {
+  font-size: 16px;
+  font-weight: 500;
+  color: #64748b;
 }
 
 .tagline {
