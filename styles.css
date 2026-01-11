@@ -332,6 +332,7 @@ a {
 /* Section Styles */
 .section {
   padding: 80px 0;
+  overflow: visible;
 }
 
 .section-alt {
@@ -1178,6 +1179,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 32px;
+  overflow: visible;
 }
 
 .insurance-product-card {
@@ -1187,11 +1189,16 @@ a {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   border-top: 4px solid #1e40af;
+  overflow: visible;
 }
 
 .insurance-product-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.insurance-product-card:has(.has-tooltip:hover) {
+  transform: none;
 }
 
 .insurance-product-card h3 {
@@ -1205,6 +1212,7 @@ a {
   list-style: none;
   padding: 0;
   margin: 0;
+  overflow: visible;
 }
 
 .product-list li {
@@ -1232,6 +1240,11 @@ a {
 .product-list li.has-tooltip {
   cursor: pointer;
   position: relative;
+  z-index: 1;
+}
+
+.product-list li.has-tooltip:hover {
+  z-index: 9999;
 }
 
 .product-list li.has-tooltip:after {
@@ -1241,7 +1254,6 @@ a {
 }
 
 .product-tooltip {
-  display: none;
   position: absolute;
   left: 0;
   top: 100%;
@@ -1250,9 +1262,12 @@ a {
   padding: 16px 20px;
   border-radius: 8px;
   width: 320px;
-  z-index: 100;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   margin-top: 8px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
 .product-tooltip:before {
@@ -1294,8 +1309,9 @@ a {
   font-size: 14px;
 }
 
-.product-list li.has-tooltip:hover .product-tooltip {
-  display: block;
+.product-list li.has-tooltip:hover > .product-tooltip {
+  visibility: visible;
+  opacity: 1;
 }
 
 /* Responsive Styles */
