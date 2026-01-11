@@ -39,9 +39,10 @@
                     <a href="#join" data-en="Join Us" data-zh="加入我们">Join Us</a>
                     <a href="#about" data-en="About" data-zh="关于">About</a>
                     <a href="#contact" class="btn-primary" data-en="Book Consultation" data-zh="预约咨询">Book Consultation</a>
-                    <button class="language-toggle-header" id="languageToggle" aria-label="Toggle Language">
-                        <span class="lang-text">中文</span>
-                    </button>
+                    <div class="language-buttons">
+                        <button class="lang-btn active" id="langEN" aria-label="English">EN</button>
+                        <button class="lang-btn" id="langZH" aria-label="Chinese">中文</button>
+                    </div>
                 </nav>
                 <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
                     <span></span>
@@ -57,9 +58,10 @@
             <a href="#join" data-en="Join Us" data-zh="加入我们">Join Us</a>
             <a href="#about" data-en="About" data-zh="关于">About</a>
             <a href="#contact" data-en="Contact" data-zh="联系">Contact</a>
-            <button class="language-toggle-mobile" id="languageToggleMobile" aria-label="Toggle Language">
-                <span class="lang-text">中文</span>
-            </button>
+            <div class="language-buttons-mobile">
+                <button class="lang-btn active" id="langENMobile" aria-label="English">EN</button>
+                <button class="lang-btn" id="langZHMobile" aria-label="Chinese">中文</button>
+            </div>
         </nav>
     </header>
 
@@ -68,8 +70,8 @@
         <section class="hero" id="home">
             <div class="container">
                 <div class="hero-content fade-in">
-                    <h2 class="hero-headline" data-en="One Stop Insurance Centre & Corporate Risk Management" data-zh="保险与企业风险管理">One Stop Insurance Centre & Corporate Risk Management</h2>
-                    <p class="hero-subheadline" data-en="Comprehensive life & general insurance solutions and professional agent development for families and SMEs." data-zh="为家庭和中小企业提供全面的人寿及普通保险解决方案，以及专业代理发展。">Comprehensive life & general insurance solutions and professional agent development for families and SMEs.</p>
+                    <h2 class="hero-headline" data-en="One Stop Insurance Service Centre & Corporate Risk Management" data-zh="一站式保险服务中心与企业风险管理">One Stop Insurance Service Centre & Corporate Risk Management</h2>
+                    <p class="hero-subheadline" data-en="Comprehensive Life & General Insurance Solutions For Personal and Corporate" data-zh="全面的人寿与普通保险解决方案，适用于个人与企业">Comprehensive Life & General Insurance Solutions For Personal and Corporate</p>
                     <div class="hero-ctas">
                         <a href="#contact" class="btn-primary btn-large" data-en="Book Consultation" data-zh="预约咨询">Book Consultation</a>
                         <a href="https://wa.me/60124805119" class="btn-secondary btn-large" target="_blank" data-en="WhatsApp Now" data-zh="立即WhatsApp">WhatsApp Now</a>
@@ -84,31 +86,26 @@
             <div class="container">
                 <div class="section-header fade-in">
                     <h2 data-en="Core Services" data-zh="核心服务">Core Services</h2>
-                    <p class="section-intro" data-en="Comprehensive advisory services for business and personal protection" data-zh="为企业和个人保护提供全面的咨询服务">Comprehensive advisory services for business and personal protection</p>
                 </div>
                 <div class="services-grid">
                     <div class="service-pillar-card fade-in">
                         <h3 data-en="Corporate Risk Management" data-zh="企业风险管理">Corporate Risk Management</h3>
-                        <p class="for-whom"><strong data-en="For:" data-zh="适用于：">For:</strong> <span data-en="Business owners, SMEs, directors" data-zh="企业主、中小企业、董事">Business owners, SMEs, directors</span></p>
-                        <p class="problems-solved"><strong data-en="Problems Solved:" data-zh="解决问题：">Problems Solved:</strong> <span data-en="Unidentified exposures, coverage gaps, succession uncertainty" data-zh="未识别的风险、保障缺口、继承不确定性">Unidentified exposures, coverage gaps, succession uncertainty</span></p>
-                        <div class="deliverables">
+                        <p class="for-whom"><strong data-en="For:" data-zh="适用于：">For:</strong> <span data-en="Business owners, SMEs" data-zh="企业主、中小企业">Business owners, SMEs</span></p>
                             <strong data-en="Typical Deliverables:" data-zh="典型交付成果：">Typical Deliverables:</strong>
                             <ul>
                                 <li data-en="Risk assessment & coverage gap analysis" data-zh="风险评估与保障缺口分析">Risk assessment & coverage gap analysis</li>
                                 <li data-en="Structured protection recommendations" data-zh="结构化保护建议">Structured protection recommendations</li>
-                                <li data-en="Implementation roadmap" data-zh="实施路线图">Implementation roadmap</li>
                             </ul>
                         </div>
                     </div>
                     <div class="service-pillar-card fade-in">
                         <h3 data-en="Financial Advisory" data-zh="财务规划">Financial Advisory</h3>
                         <p class="for-whom"><strong data-en="For:" data-zh="适用于：">For:</strong> <span data-en="Families, individuals, professionals" data-zh="家庭、个人、专业人士">Families, individuals, professionals</span></p>
-                        <p class="problems-solved"><strong data-en="Problems Solved:" data-zh="解决问题：">Problems Solved:</strong> <span data-en="Income replacement, retirement gaps, education funding" data-zh="收入替代、退休缺口、教育资金">Income replacement, retirement gaps, education funding</span></p>
                         <div class="deliverables">
                             <strong data-en="Typical Deliverables:" data-zh="典型交付成果：">Typical Deliverables:</strong>
                             <ul>
                                 <li data-en="Financial needs analysis" data-zh="财务需求分析">Financial needs analysis</li>
-                                <li data-en="Insurance & investment recommendations" data-zh="保险与投资建议">Insurance & investment recommendations</li>
+                                <li data-en="Insurance coverage recommendations" data-zh="保险保障建议">Insurance coverage recommendations</li>
                                 <li data-en="Periodic review & adjustment" data-zh="定期审查与调整">Periodic review & adjustment</li>
                             </ul>
                         </div>
@@ -116,22 +113,17 @@
                     <div class="service-pillar-card fade-in">
                         <h3 data-en="Life & General Insurance" data-zh="人寿与普通保险">Life & General Insurance</h3>
                         <p class="for-whom"><strong data-en="For:" data-zh="适用于：">For:</strong> <span data-en="Individuals, families, businesses" data-zh="个人、家庭、企业">Individuals, families, businesses</span></p>
-                        <p class="problems-solved"><strong data-en="Problems Solved:" data-zh="解决问题：">Problems Solved:</strong> <span data-en="Underinsurance, wrong coverage, claims complexity" data-zh="保险不足、错误保障、索赔复杂">Underinsurance, wrong coverage, claims complexity</span></p>
                         <div class="deliverables">
                             <strong data-en="Typical Deliverables:" data-zh="典型交付成果：">Typical Deliverables:</strong>
                             <ul>
-                                <li data-en="Coverage review & optimization" data-zh="保障审查与优化">Coverage review & optimization</li>
+                                <li data-en="Coverage review" data-zh="保障审查">Coverage review</li>
                                 <li data-en="Policy placement & renewal management" data-zh="保单配置与续保管理">Policy placement & renewal management</li>
                                 <li data-en="Claims support & coordination" data-zh="索赔支持与协调">Claims support & coordination</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="service-ctas fade-in">
-                    <a href="#contact" class="btn-primary" data-en="Request a Risk Review" data-zh="申请风险审查">Request a Risk Review</a>
-                    <a href="#contact" class="btn-secondary" data-en="Get a Coverage Review" data-zh="获取保障审查">Get a Coverage Review</a>
-                </div>
-            </div>
+                            </div>
         </section>
 
 

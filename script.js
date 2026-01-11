@@ -110,7 +110,7 @@ window.addEventListener("scroll", () => {
   lastScroll = currentScroll
 })
 
-// Language toggle functionality
+// Language functionality
 let currentLanguage = "en"
 
 function translatePage(lang) {
@@ -135,32 +135,28 @@ function translatePage(lang) {
     }
   })
 
-  // Update language toggle button text
-  const langTexts = document.querySelectorAll(".lang-text")
-  langTexts.forEach((el) => {
-    el.textContent = lang === "en" ? "中文" : "EN"
+  // Update active state on language buttons
+  document.querySelectorAll(".lang-btn").forEach((btn) => {
+    btn.classList.remove("active")
   })
+
+  if (lang === "en") {
+    document.getElementById("langEN")?.classList.add("active")
+    document.getElementById("langENMobile")?.classList.add("active")
+  } else {
+    document.getElementById("langZH")?.classList.add("active")
+    document.getElementById("langZHMobile")?.classList.add("active")
+  }
 
   // Store language preference
   localStorage.setItem("preferredLanguage", lang)
 }
 
-// Language toggle buttons (desktop and mobile)
-const languageToggle = document.getElementById("languageToggle")
-const languageToggleMobile = document.getElementById("languageToggleMobile")
-
-function handleLanguageToggle() {
-  const newLang = currentLanguage === "en" ? "zh" : "en"
-  translatePage(newLang)
-}
-
-if (languageToggle) {
-  languageToggle.addEventListener("click", handleLanguageToggle)
-}
-
-if (languageToggleMobile) {
-  languageToggleMobile.addEventListener("click", handleLanguageToggle)
-}
+// Language buttons (desktop and mobile)
+document.getElementById("langEN")?.addEventListener("click", () => translatePage("en"))
+document.getElementById("langZH")?.addEventListener("click", () => translatePage("zh"))
+document.getElementById("langENMobile")?.addEventListener("click", () => translatePage("en"))
+document.getElementById("langZHMobile")?.addEventListener("click", () => translatePage("zh"))
 
 // Load saved language preference
 const savedLanguage = localStorage.getItem("preferredLanguage")
