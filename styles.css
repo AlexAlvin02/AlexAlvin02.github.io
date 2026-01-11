@@ -189,6 +189,7 @@ a {
   font-size: 12px;
   font-weight: 500;
   color: #64748b;
+  font-style: italic;
 }
 
 .brand-title {
@@ -790,6 +791,7 @@ a {
   font-size: 16px;
   font-weight: 500;
   color: #64748b;
+  font-style: italic;
 }
 
 .tagline {
