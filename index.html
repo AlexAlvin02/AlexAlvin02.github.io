@@ -205,43 +205,11 @@
                 </div>
                 <div class="contact-layout">
                     <div class="contact-form-container fade-in">
-                        <form class="contact-form" id="contactForm">
-                            <h3 data-en="Get in Touch" data-zh="联系我们">Get in Touch</h3>
-                            <div class="form-group">
-                                <label for="name" data-en="Name" data-zh="姓名">Name</label> <span class="required">*</span>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email" data-en="Email" data-zh="电子邮件">Email</label> <span class="required">*</span>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone" data-en="Phone" data-zh="电话">Phone</label>
-                                <input type="tel" id="phone" name="phone">
-                            </div>
-                            <div class="form-group">
-                                <label for="interest" data-en="I'm interested in:" data-zh="我感兴趣的是：">I'm interested in:</label>
-                                <select id="interest" name="interest">
-                                    <option value="" data-en="Select an option" data-zh="选择一个选项">Select an option</option>
-                                    <option value="corporate-risk" data-en="Corporate Risk Review" data-zh="企业风险审查">Corporate Risk Review</option>
-                                    <option value="personal-insurance" data-en="Personal Insurance Planning" data-zh="个人保险规划">Personal Insurance Planning</option>
-                                    <option value="general-insurance" data-en="General Insurance" data-zh="普通保险">General Insurance</option>
-                                    <option value="agent" data-en="Joining as an Agent" data-zh="加入成为代理">Joining as an Agent</option>
-                                    <option value="other" data-en="Other / General Enquiry" data-zh="其他 / 一般咨询">Other / General Enquiry</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="message" data-en="Message" data-zh="留言">Message</label>
-                                <textarea id="message" name="message" rows="4"></textarea>
-                            </div>
-                            <div class="form-group checkbox-group">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="consent" required>
-                                    <span data-en="I consent to being contacted regarding my enquiry" data-zh="我同意就我的咨询被联系">I consent to being contacted regarding my enquiry</span> <span class="required">*</span>
-                                </label>
-                            </div>
-                            <button type="submit" class="btn-primary btn-large" data-en="Send Enquiry" data-zh="发送咨询">Send Enquiry</button>
-                        </form>
+                        <div class="contact-cta-box">
+                            <h3 data-en="Book a Consultation" data-zh="预约咨询">Book a Consultation</h3>
+                            <p data-en="Fill out our quick form and we'll get back to you within 24 hours." data-zh="填写我们的快速表格，我们将在24小时内回复您。">Fill out our quick form and we'll get back to you within 24 hours.</p>
+                            <a href="YOUR_CONSULTATION_GOOGLE_FORM_URL" target="_blank" class="btn-primary btn-large" data-en="Open Consultation Form" data-zh="打开咨询表格">Open Consultation Form</a>
+                        </div>
                     </div>
                     <div class="contact-info fade-in">
                         <h3 data-en="Contact Information" data-zh="联系信息">Contact Information</h3>
@@ -307,30 +275,11 @@
                         </div>
                     </div>
                     <div class="join-form-container fade-in">
-                        <form class="join-form" id="joinForm">
+                        <div class="contact-cta-box">
                             <h3 data-en="Apply to Join" data-zh="申请加入">Apply to Join</h3>
-                            <div class="form-group">
-                                <label for="joinName" data-en="Full Name" data-zh="全名">Full Name</label> <span class="required">*</span>
-                                <input type="text" id="joinName" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="joinEmail" data-en="Email" data-zh="电子邮件">Email</label> <span class="required">*</span>
-                                <input type="email" id="joinEmail" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="joinPhone" data-en="Phone" data-zh="电话">Phone</label> <span class="required">*</span>
-                                <input type="tel" id="joinPhone" name="phone" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="joinBackground" data-en="Background / Current Role" data-zh="背景 / 当前职位">Background / Current Role</label>
-                                <input type="text" id="joinBackground" name="background">
-                            </div>
-                            <div class="form-group">
-                                <label for="joinWhy" data-en="Why are you interested?" data-zh="您为什么感兴趣？">Why are you interested?</label>
-                                <textarea id="joinWhy" name="why" rows="4"></textarea>
-                            </div>
-                            <button type="submit" class="btn-primary btn-large" data-en="Submit Application" data-zh="提交申请">Submit Application</button>
-                        </form>
+                            <p data-en="Ready to start your career in financial advisory? Fill out our application form." data-zh="准备好开始您的财务咨询职业了吗？填写我们的申请表格。">Ready to start your career in financial advisory? Fill out our application form.</p>
+                            <a href="YOUR_AGENT_APPLICATION_GOOGLE_FORM_URL" target="_blank" class="btn-primary btn-large" data-en="Open Application Form" data-zh="打开申请表格">Open Application Form</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -525,25 +474,6 @@
         </div>
     </footer>
 
-    <!-- Modal for Form Submission -->
-    <div class="modal" id="formModal" aria-hidden="true" role="dialog">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Close">&times;</button>
-            <div class="modal-icon success">
-                <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                    <polyline points="22 4 12 14.01 9 11.01"/>
-                </svg>
-            </div>
-            <h2 data-en="Enquiry Received" data-zh="已收到咨询">Enquiry Received</h2>
-            <div class="modal-body" id="modalBody"></div>
-            <div class="modal-actions">
-                <button id="copyButton" class="btn-secondary" data-en="Copy to Clipboard" data-zh="复制到剪贴板">Copy to Clipboard</button>
-                <a id="mailtoButton" class="btn-primary" data-en="Open Email Draft" data-zh="打开电子邮件草稿">Open Email Draft</a>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
